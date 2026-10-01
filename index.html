@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кочевая технологическая цивилизация</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Основная сцена мира -->
+    <main class="world">
+
+        <!-- Фоновая иллюстрация -->
+        <div class="world-background"></div>
+
+        <!-- Интерактивные объекты -->
+        <section class="world-objects">
+
+            <!-- Ходячий дом -->
+            <button
+                class="world-object walking-house"
+                data-object="walking-house"
+                aria-label="Ходячий дом"
+            >
+                <img src="assets/walking-house.png" alt="Ходячий дом">
+            </button>
+
+            <!-- Робот-паук -->
+            <button
+                class="world-object spider-robot"
+                data-object="spider-robot"
+                aria-label="Робот-паук"
+            >
+                <img src="assets/spider-robot.png" alt="Робот-паук">
+            </button>
+
+            <!-- Смарт-центр -->
+            <button
+                class="world-object smart-center"
+                data-object="smart-center"
+                aria-label="Смарт-центр"
+            >
+                <img src="assets/smart-center.png" alt="Смарт-центр">
+            </button>
+
+            <!-- Дрон-беркут -->
+            <button
+                class="world-object berkut"
+                data-object="berkut"
+                aria-label="Дрон Беркут"
+            >
+                <img src="assets/berkut.png" alt="Дрон Беркут">
+            </button>
+
+            <!-- Спутник -->
+            <button
+                class="world-object satellite"
+                data-object="satellite"
+                aria-label="Спутник"
+            >
+                <img src="assets/satellite.png" alt="Спутник">
+            </button>
+
+        </section>
+
+
+        <!-- Всплывающая карточка при наведении -->
+        <aside class="object-preview" id="object-preview">
+
+            <button class="preview-close" aria-label="Закрыть">
+                ×
+            </button>
+
+            <img
+                class="preview-image"
+                src=""
+                alt=""
+            >
+
+            <div class="preview-content">
+                <span class="preview-category">
+                    Категория
+                </span>
+
+                <h2 class="preview-title">
+                    Название объекта
+                </h2>
+
+                <p class="preview-description">
+                    Краткое описание объекта.
+                </p>
+
+                <button class="preview-more">
+                    Подробнее
+                </button>
+            </div>
+
+        </aside>
+
+
+        <!-- Большая карточка / книга -->
+        <div class="object-book" id="object-book">
+
+            <button class="book-close" aria-label="Закрыть">
+                ×
+            </button>
+
+            <div class="book-page book-page-left">
+
+                <span class="book-category">
+                    Технология
+                </span>
+
+                <h1 class="book-title">
+                    Ходячий дом
+                </h1>
+
+                <p class="book-text">
+                    Автономное мобильное жилище кочевника,
+                    созданное на основе традиционной формы юрты
+                    и современных технологий.
+                </p>
+
+            </div>
+
+
+            <div class="book-page book-page-right">
+
+                <img
+                    class="book-image"
+                    src=""
+                    alt=""
+                >
+
+                <div class="book-details">
+
+                    <div class="detail">
+                        <span>Энергия</span>
+                        <strong>Солнце · ветер · отходы</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Вода</span>
+                        <strong>Сбор · фильтрация</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Навигация</span>
+                        <strong>Автономная</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Связь</span>
+                        <strong>Спутниковая</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Навигация -->
+    <nav class="navigation">
+
+        <button data-section="world">
+            Мир
+        </button>
+
+        <button data-section="objects">
+            Объекты
+        </button>
+
+        <button data-section="technology">
+            Технологии
+        </button>
+
+        <button data-section="people">
+            Люди
+        </button>
+
+        <button data-section="rules">
+            Правила мира
+        </button>
+
+    </nav>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

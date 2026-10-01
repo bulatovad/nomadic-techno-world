@@ -1,0 +1,62 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.world {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.world-background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../assets/world-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.walking-house {
+    left: 12%;
+    bottom: 15%;
+}
+
+.spider-robot {
+    left: 43%;
+    bottom: 35%;
+}
+
+.smart-center {
+    right: 8%;
+    bottom: 25%;
+}
+
+.berkut {
+    left: 52%;
+    top: 12%;
+}
+
+.satellite {
+    right: 8%;
+    top: 8%;
+}
+
+.world-object {
+    position: absolute;
+    transition: transform 0.25s ease;
+}
+
+.world-object:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
