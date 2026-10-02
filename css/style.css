@@ -19,7 +19,6 @@ body {
 .world-background {
     position: absolute;
     inset: 0;
-
     background-image: url("../assets/world-background.png");
     background-size: cover;
     background-position: center;
@@ -27,18 +26,28 @@ body {
 }
 
 .walking-house {
-    left: 12%;
-    bottom: 15%;
+    left: -6%;
+    bottom: 23%;
+    width: 40%;
+    height: 40%;
+    background-color: transparent;
+    padding: -15px;
+    border: none;
+}
+
+.walking-house img{
+    width: 90%;
+    margin: -15px;
 }
 
 .spider-robot {
-    left: 43%;
-    bottom: 35%;
+    left: 40%;
+    bottom: 40%;
 }
 
 .smart-center {
     right: 8%;
-    bottom: 25%;
+    bottom: 40%;
 }
 
 .berkut {
@@ -47,7 +56,7 @@ body {
 }
 
 .satellite {
-    right: 8%;
+    right: 6%;
     top: 8%;
 }
 
