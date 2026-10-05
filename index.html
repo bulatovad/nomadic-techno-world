@@ -17,6 +17,15 @@
         <!-- Фоновая иллюстрация -->
         <div class="world-background"></div>
 
+        <div class="brief-info">
+            <h2><b>i</b></h2>
+        </div>
+        <div class="language-switcher">
+            <button data-lang="kk">ҚАЗ</button>
+            <button data-lang="ru">РУС</button>
+            <button data-lang="en">ENG</button>
+        </div>
+
         <!-- Интерактивные объекты -->
         <section class="world-objects">
 
@@ -67,97 +76,36 @@
 
         </section>
 
+ <!-- Затемнение фона -->
+        <div class="modal-overlay" id="modalOverlay"></div>
 
-        <!-- Всплывающая карточка при наведении -->
-        <aside class="object-preview" id="object-preview">
 
-            <button class="preview-close" aria-label="Закрыть">
+        <!-- Окно информации -->
+        <div class="info-modal" id="infoModal">
+
+            <button class="modal-close" id="modalClose">
                 ×
             </button>
 
-            <img
-                class="preview-image"
-                src=""
-                alt=""
-            >
-
-            <div class="preview-content">
-                <span class="preview-category">
-                    Категория
-                </span>
-
-                <h2 class="preview-title">
-                    Название объекта
-                </h2>
-
-                <p class="preview-description">
-                    Краткое описание объекта.
-                </p>
-
-                <button class="preview-more">
-                    Подробнее
-                </button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
             </div>
 
-        </aside>
+            <div class="modal-content">
 
-
-        <!-- Большая карточка / книга -->
-        <div class="object-book" id="object-book">
-
-            <button class="book-close" aria-label="Закрыть">
-                ×
-            </button>
-
-            <div class="book-page book-page-left">
-
-                <span class="book-category">
-                    Технология
+                <span class="modal-category" id="modalCategory">
+                    Объект
                 </span>
 
-                <h1 class="book-title">
-                    Ходячий дом
+                <h1 id="modalTitle">
+                    Название
                 </h1>
 
-                <p class="book-text">
-                    Автономное мобильное жилище кочевника,
-                    созданное на основе традиционной формы юрты
-                    и современных технологий.
+                <p id="modalDescription">
+                    Описание объекта.
                 </p>
 
-            </div>
-
-
-            <div class="book-page book-page-right">
-
-                <img
-                    class="book-image"
-                    src=""
-                    alt=""
-                >
-
-                <div class="book-details">
-
-                    <div class="detail">
-                        <span>Энергия</span>
-                        <strong>Солнце · ветер · отходы</strong>
-                    </div>
-
-                    <div class="detail">
-                        <span>Вода</span>
-                        <strong>Сбор · фильтрация</strong>
-                    </div>
-
-                    <div class="detail">
-                        <span>Навигация</span>
-                        <strong>Автономная</strong>
-                    </div>
-
-                    <div class="detail">
-                        <span>Связь</span>
-                        <strong>Спутниковая</strong>
-                    </div>
-
+                <div class="modal-details" id="modalDetails">
                 </div>
 
             </div>
@@ -167,33 +115,8 @@
     </main>
 
 
-    <!-- Навигация -->
-    <nav class="navigation">
-
-        <button data-section="world">
-            Мир
-        </button>
-
-        <button data-section="objects">
-            Объекты
-        </button>
-
-        <button data-section="technology">
-            Технологии
-        </button>
-
-        <button data-section="people">
-            Люди
-        </button>
-
-        <button data-section="rules">
-            Правила мира
-        </button>
-
-    </nav>
-
-
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-
+    
 </body>
 </html>
