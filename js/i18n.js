@@ -13,6 +13,7 @@ const translations = {
         close: "Закрыть",
 
         walkingHouse: {
+            image: "assets/walking_house_scheme_ru.png",
             title: "Ходячий дом",
             category: "Жилище",
             description:
@@ -99,6 +100,8 @@ const translations = {
         close: "Жабу",
 
         walkingHouse: {
+            image: "assets/walking_house_scheme_kz.png",
+
             title: "Жүретін үй",
             category: "Тұрғын үй",
             description:
@@ -174,6 +177,7 @@ const translations = {
     en: {
         siteTitle: "Nomadic Technological Civilization",
         siteSubtitle: "In an Alternate Universe",
+        
 
         objects: "Objects",
         technologies: "Technologies",
@@ -184,6 +188,7 @@ const translations = {
         close: "Close",
 
         walkingHouse: {
+            image: "assets/walking_house_scheme_en.png",
             title: "Walking House",
             category: "Dwelling",
             description:

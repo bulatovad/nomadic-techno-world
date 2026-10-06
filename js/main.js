@@ -1,7 +1,7 @@
 const objects = {
 
     "walking-house": {
-        image: "assets/walking-house.png",
+        //image: "assets/walking-house.png",
         translation: "walkingHouse",
 
         details: [
@@ -92,6 +92,9 @@ const modalImage =
 const modalDetails =
     document.getElementById("modalDetails");
 
+const briefInfoButton =
+    document.getElementById("briefInfo");
+
 
 // -------------------------
 // Текущий язык
@@ -153,7 +156,7 @@ function openObject(objectId) {
 
     // Изображение
     modalImage.src =
-        object.image;
+        object.image? object.image : languageData.image;
 
     modalImage.alt =
         languageData.title;
@@ -230,6 +233,9 @@ objectButtons.forEach(button => {
 
 });
 
+
+briefInfoButton.addEventListener("click", () => {
+    briefInfoButton.classList.toggle("active");});
 
 // -------------------------
 // Закрытие модалки
