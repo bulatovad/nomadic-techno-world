@@ -82,6 +82,11 @@ const translations = {
             communicationValue: "Спутниковая сеть",
             navigation: "Навигация",
             navigationValue: "Глобальные навигационные данные"
+        },
+        history: {
+            category: "МИР",
+            title: "Краткая предыстория мира",
+            description: "Кочевая технологическая цивилизация — это альтернативная вселенная, в которой человечество развилось по пути кочевого образа жизни, сохранив при этом высокие технологии. В этом мире люди живут в мобильных домах, используют автономных роботов и дроны для добычи ресурсов и поддержания инфраструктуры, а также полагаются на спутниковую связь и навигацию."
         }
     },
 
@@ -170,6 +175,11 @@ const translations = {
             communicationValue: "Спутниктік желі",
             navigation: "Навигация",
             navigationValue: "Жаһандық навигациялық деректер"
+        },
+        history: {
+            category: "ӘЛЕМ",
+            title: "Әлемнің қысқаша тарихы",
+            description: "Көшпелі технологиялық өркениет — адамзат көшпелі өмір салтын сақтай отырып, жоғары технологиялар жолымен дамыған балама әлем. Бұл әлемде адамдар мобильді үйлерде өмір сүреді, ресурстарды өндіру және инфрақұрылымды қолдау үшін автономды роботтар мен дрондарды пайдаланады, сондай-ақ спутниктік байланыс пен навигацияға сүйенеді."
         }
     },
 
@@ -257,6 +267,11 @@ const translations = {
             communicationValue: "Satellite network",
             navigation: "Navigation",
             navigationValue: "Global navigation data"
+        },
+        history: {
+            category: "WORLD",
+            title: "A Brief History of the World",
+            description: "A nomadic technological civilization is an alternative universe in which humanity developed along a nomadic way of life while retaining advanced technology. In this world, people live in mobile homes, use autonomous robots and drones for resource extraction and infrastructure support, and rely on satellite communication and navigation."
         }
     }
 

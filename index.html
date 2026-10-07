@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +18,23 @@
         <!-- Фоновая иллюстрация -->
         <div class="world-background"></div>
 
-        <div class="brief-info" id="briefInfo">
-            <h2><b>i</b></h2>
+        <button class="brief-info" id="historyOpen">
+            <span>i</span>
+        </button>
+
+        <div class="history-modal" id="historyModal">
+            <button class="modal-close" id="historyClose">×</button>
+
+            <div class="history-page history-left">
+                <span id="historyCategory"></span>
+                <h1 id="historyTitle"></h1>
+            </div>
+
+            <div class="history-page history-right">
+                <p id="historyDescription"></p>
+            </div>
         </div>
+
         <div class="language-switcher">
             <button data-lang="kk">ҚАЗ</button>
             <button data-lang="ru">РУС</button>
@@ -30,53 +45,33 @@
         <section class="world-objects">
 
             <!-- Ходячий дом -->
-            <button
-                class="world-object walking-house"
-                data-object="walking-house"
-                aria-label="Ходячий дом"
-            >
+            <button class="world-object walking-house" data-object="walking-house" aria-label="Ходячий дом">
                 <img src="assets/walking-house.png" alt="Ходячий дом">
             </button>
 
             <!-- Робот-паук -->
-            <button
-                class="world-object spider-robot"
-                data-object="spider-robot"
-                aria-label="Робот-паук"
-            >
+            <button class="world-object spider-robot" data-object="spider-robot" aria-label="Робот-паук">
                 <img src="assets/spider-robot.png" alt="Робот-паук">
             </button>
 
             <!-- Смарт-центр -->
-            <button
-                class="world-object smart-center"
-                data-object="smart-center"
-                aria-label="Смарт-центр"
-            >
+            <button class="world-object smart-center" data-object="smart-center" aria-label="Смарт-центр">
                 <img src="assets/smart-center.png" alt="Смарт-центр">
             </button>
 
             <!-- Дрон-беркут -->
-            <button
-                class="world-object berkut"
-                data-object="berkut"
-                aria-label="Дрон Беркут"
-            >
+            <button class="world-object berkut" data-object="berkut" aria-label="Дрон Беркут">
                 <img src="assets/berkut.png" alt="Дрон Беркут">
             </button>
 
             <!-- Спутник -->
-            <button
-                class="world-object satellite"
-                data-object="satellite"
-                aria-label="Спутник"
-            >
+            <button class="world-object satellite" data-object="satellite" aria-label="Спутник">
                 <img src="assets/satellite.png" alt="Спутник">
             </button>
 
         </section>
 
- <!-- Затемнение фона -->
+        <!-- Затемнение фона -->
         <div class="modal-overlay" id="modalOverlay"></div>
 
 
@@ -117,6 +112,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    
+
 </body>
+
 </html>

@@ -57,7 +57,6 @@ const objects = {
             ["navigation", "navigationValue"]
         ]
     }
-
 };
 
 
@@ -156,7 +155,7 @@ function openObject(objectId) {
 
     // Изображение
     modalImage.src =
-        object.image? object.image : languageData.image;
+        object.image ? object.image : languageData.image;
 
     modalImage.alt =
         languageData.title;
@@ -168,18 +167,18 @@ function openObject(objectId) {
 
     object.details.forEach(detail => {
 
-    const label =
-        languageData[detail[0]];
+        const label =
+            languageData[detail[0]];
 
-    const value =
-        languageData[detail[1]];
+        const value =
+            languageData[detail[1]];
 
-    const element =
-        document.createElement("div");
+        const element =
+            document.createElement("div");
 
-    element.className = "detail";
+        element.className = "detail";
 
-    element.innerHTML = `
+        element.innerHTML = `
         <span class="detail-name">
             ${label}
         </span>
@@ -189,9 +188,9 @@ function openObject(objectId) {
         </span>
     `;
 
-    modalDetails.appendChild(element);
+        modalDetails.appendChild(element);
 
-});
+    });
 
 
     // Запоминаем активный объект
@@ -232,10 +231,6 @@ objectButtons.forEach(button => {
     });
 
 });
-
-
-briefInfoButton.addEventListener("click", () => {
-    briefInfoButton.classList.toggle("active");});
 
 // -------------------------
 // Закрытие модалки
@@ -278,6 +273,27 @@ document.addEventListener(
 );
 
 
+function openHistory() {
+    const languageData = translations[currentLanguage].history;
+
+    document.getElementById("historyCategory").textContent =
+        languageData.category;
+
+    document.getElementById("historyTitle").textContent =
+        languageData.title;
+
+    document.getElementById("historyDescription").textContent =
+        languageData.description;
+
+    document.getElementById("historyModal").classList.add("active");
+}
+
+document.getElementById("historyOpen").addEventListener("click", openHistory);
+
+document.getElementById("historyClose").addEventListener("click", () => {
+    document.getElementById("historyModal").classList.remove("active");
+});
+
 // -------------------------
 // Переключение языка
 // -------------------------
@@ -312,6 +328,10 @@ document
                     currentObjectId
                 );
 
+            }
+
+            if (historyModal.classList.contains("active")) {
+                openHistory();
             }
 
         });
