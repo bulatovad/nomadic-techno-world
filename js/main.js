@@ -334,10 +334,22 @@ document
                 openHistory();
             }
 
+            
+            const copyrightText = document.querySelector(".copyright");
+            const aiNoticeText = document.querySelector(".ai-notice");
+
+            copyrightText.textContent = translations[currentLanguage].copyright;
+            aiNoticeText.textContent = translations[currentLanguage].aiNotice;
+
+            const siteTitle = document.getElementsByTagName("title")[0];
+            siteTitle.textContent = translations[currentLanguage].siteTitle;
+
         });
 
     });
-    
+
+
+
 const schemeViewer = document.getElementById("schemeViewer");
 const schemeViewerImage = document.getElementById("schemeViewerImage");
 const schemeClose = document.getElementById("schemeClose");
