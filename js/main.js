@@ -337,3 +337,32 @@ document
         });
 
     });
+    
+const schemeViewer = document.getElementById("schemeViewer");
+const schemeViewerImage = document.getElementById("schemeViewerImage");
+const schemeClose = document.getElementById("schemeClose");
+const modalImageArea = document.querySelector(".modal-image");
+
+modalImageArea.addEventListener("click", () => {
+    if (!modalImage.src || modalImage.src === window.location.href) return;
+
+    schemeViewerImage.src = modalImage.src;
+    schemeViewerImage.alt = modalImage.alt;
+    schemeViewer.classList.add("active");
+});
+
+schemeClose.addEventListener("click", () => {
+    schemeViewer.classList.remove("active");
+});
+
+schemeViewer.addEventListener("click", (event) => {
+    if (event.target === schemeViewer) {
+        schemeViewer.classList.remove("active");
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        schemeViewer.classList.remove("active");
+    }
+});
