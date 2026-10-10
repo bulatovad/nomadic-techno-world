@@ -100,7 +100,7 @@ const briefInfoButton =
 // -------------------------
 
 let currentLanguage =
-    localStorage.getItem("language") || "ru";
+    localStorage.getItem("language") || detectBrowserLanguage();
 
 
 // -------------------------
@@ -298,26 +298,23 @@ document.getElementById("historyClose").addEventListener("click", () => {
 // Переключение языка
 // -------------------------
 
-document
-    .querySelectorAll("[data-lang]")
-    .forEach(button => {
+function setLanguage(language) {
+    if (!translations[language]) return;
 
-        button.addEventListener("click", () => {
+    currentLanguage = language;
+    localStorage.setItem("language", language);
 
-            const language =
-                button.dataset.lang;
+    document.documentElement.lang = language;
+    updateInterface();
+}
 
-            if (!translations[language]) {
-                return;
-            }
+document.querySelectorAll("[data-lang]").forEach(button => {
+    button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+    });
+});
 
-            currentLanguage = language;
-
-            localStorage.setItem(
-                "language",
-                currentLanguage
-            );
-
+function updateInterface() {
 
             // Если модалка открыта,
             // сразу обновляем её содержимое
@@ -344,9 +341,8 @@ document
             const siteTitle = document.getElementsByTagName("title")[0];
             siteTitle.textContent = translations[currentLanguage].siteTitle;
 
-        });
 
-    });
+        }
 
 
 
@@ -378,3 +374,17 @@ document.addEventListener("keydown", (event) => {
         schemeViewer.classList.remove("active");
     }
 });
+
+function detectBrowserLanguage() {
+    const browserLanguage = navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("kk")) return "kk";
+    if (browserLanguage.startsWith("ru")) return "ru";
+    if (browserLanguage.startsWith("en")) return "en";
+
+    return "kk"; // язык по умолчанию
+}
+
+
+
+updateInterface();

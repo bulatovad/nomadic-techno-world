@@ -12,8 +12,8 @@ const translations = {
         details: "Подробнее",
         close: "Закрыть",
 
-        copyright: "Кочевой Техно-Мир. Концепт-арт Дамиры Булатовой",
-        aiNotice: "Все изображения созданы с помощью искусственного интеллекта",
+        copyright: "Кочевой Техно-Мир.",
+        aiNotice: "Просто фантазия. Изображения созданы с помощью ИИ",
 
         walkingHouse: {
             image: "assets/walking_house_scheme_ru.png",
@@ -107,8 +107,8 @@ const translations = {
         details: "Толығырақ",
         close: "Жабу",
 
-        copyright: "Көшпелі Техно-Әлем. Дамира Булатованың тұжырымдамалық өнер-жобасы (концепт-арт)",
-        aiNotice: "Барлық суреттер ЖИ көмегімен жасалды",
+        copyright: "Көшпелі Техно-Әлем. ",
+        aiNotice: "Жай ғана қиял. Суреттер ЖИ көмегімен жасалған.",
 
         walkingHouse: {
             image: "assets/walking_house_scheme_kz.png",
@@ -203,8 +203,8 @@ const translations = {
         details: "Details",
         close: "Close",
 
-        copyright: "Nomadic Techno World. Concept Art by Damira Bulatova",
-        aiNotice: "All images are AI-generated",
+        copyright: "Nomadic Techno World.",
+        aiNotice: "Just a fantasy. AI-generated visuals.",
 
         walkingHouse: {
             image: "assets/walking_house_scheme_en.png",
